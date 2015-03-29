@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #apt-get update
-apt-get -y install puppet
+apt-get -y install puppet pip
 #apt-get -y upgrade
 
 pip install awscli
