@@ -4,6 +4,8 @@
 apt-get -y install puppet
 #apt-get -y upgrade
 
+pip install awscli
+
 # create base directory for system-wide puppet
 mkdir -p /etc/puppet/modules
 
