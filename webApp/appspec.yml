@@ -3,12 +3,13 @@ os: linux
 files: 
   - source: puppet/
     destination: /etc/puppet/codedeploy
-  - source: staffly/
+  - source: website/
     destination: /var/www/staffly
 hooks:
   BeforeInstall:
     - location: scripts/install_puppet.sh
       runas: root
+  AfterInstall:
     - location: scripts/apply_puppet.sh
       runas: root
     - location: scripts/deregister_from_elb.sh
