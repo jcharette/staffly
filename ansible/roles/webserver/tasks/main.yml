@@ -1,0 +1,9 @@
+---
+- name: Install Apache/php
+  apt: pkg={{ item }} update_cache=yes state=latest
+  with_items:
+    - apache2
+    - php5
+    - php5-apcu
+    - php5-json
+    - php5-mysql
